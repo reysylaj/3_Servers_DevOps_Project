@@ -94,3 +94,31 @@ The Jenkins pipeline consists of multiple stages:
 terraform init       # Initialize the working directory
 terraform plan       # Preview infrastructure changes
 terraform apply      # Apply the configuration to Azure
+```
+
+### 2. Ansible Commands
+```shell
+ansible-playbook -i inventory.ini playbook.yml  # Run Ansible playbook to configure Azure VMs
+```
+
+
+### 3. Jenkins Pipeline Setup
+- **Source Control**: Link Jenkins to your GitHub repository to fetch configuration files.
+- **Pipeline Stages**:
+  - **Stage 1**: Runs Terraform commands to provision the infrastructure.
+  - **Stage 2**: Executes Ansible playbook to configure Azure resources.
+
+---
+
+## Troubleshooting and Common Issues
+
+- **SSH Connectivity**: Ensure the Network Security Group (NSG) allows SSH connections on port 22. Terraform and Ansible may encounter connectivity issues if port configurations are restricted.
+- **Azure Free Trial Limitations**: Azure trial subscriptions may limit certain VM capabilities, affecting the ability to run all configurations. Consider upgrading to a paid subscription for complete functionality.
+- **SSH Key Management**: Manage SSH keys carefully for each VM. Use the private key specified in `inventory.ini` for secure access.
+
+---
+
+## Conclusion
+
+By combining Terraform, Ansible, and Jenkins, this project provides a comprehensive solution for provisioning, configuring, and automating infrastructure deployments on Azure. This setup not only simplifies the infrastructure management process but also allows for scalability, reliability, and efficient workflow automation in cloud environments.
+
