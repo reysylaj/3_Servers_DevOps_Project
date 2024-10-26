@@ -1,0 +1,17 @@
+# playbook.yml
+
+- name: Configure Azure VM
+  hosts: devopsvm
+  become: true
+
+  tasks:
+    - name: Install Nginx
+      apt:
+        name: nginx
+        state: present
+
+    - name: Start and enable Nginx
+      systemd:
+        name: nginx
+        state: started
+        enabled: true

@@ -1,0 +1,6 @@
+client_id           = "cfd011e1-9607-42e4-bd5f-fcfd108773b7"
+client_secret       = "oMK8Q~TospVPu2id32mLW0I3ZQ~EeJPSlPp5nbI-"
+subscription_id     = "f3118645-3322-4238-aa63-cb3dd5571755"
+tenant_id           = "ff9df054-3311-474b-a074-e1c8bf3e7235"
+resource_group_name = "test-azure-group_test"
+location            = "northeurope"
