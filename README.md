@@ -122,3 +122,7 @@ ansible-playbook -i inventory.ini playbook.yml  # Run Ansible playbook to config
 
 By combining Terraform, Ansible, and Jenkins, this project provides a comprehensive solution for provisioning, configuring, and automating infrastructure deployments on Azure. This setup not only simplifies the infrastructure management process but also allows for scalability, reliability, and efficient workflow automation in cloud environments.
 
+
+## Contributors
+- [Rey Sylaj](https://github.com/reysylaj)
+- [Arnold Hoxha](https://github.com/arnoldhoxha)
